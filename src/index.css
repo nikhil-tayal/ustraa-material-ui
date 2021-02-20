@@ -1,13 +1,27 @@
+@font-face {
+  font-family: "ClearSans-Bold";
+  src: url("./assets/fonts/ClearSans-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ClearSans-Regular";
+  src: url("./assets/fonts/ClearSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ClearSans-Medium";
+  src: url("./assets/fonts/ClearSans-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ClearSans-Light";
+  src: url("./assets/fonts/ClearSans-Light.ttf") format("truetype");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "ClearSans-Light", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "ClearSans-Light", sans-serif;
 }
