@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "/rest/V1/api";
+const BASE_URL = "https://backend.ustraa.com/rest/V1/api";
 
 const createHeader = (_URL, options = {}) => {
   return { URL: `${BASE_URL}${_URL}`, options: options };
