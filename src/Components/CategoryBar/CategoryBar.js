@@ -24,11 +24,13 @@ const useStyles = makeStyles({
     fontWeight: "bold",
     color: "#757575",
     border: "1px solid #757575",
+    cursor:"pointer"
   },
   categoryWrapper: {
     position: "relative",
     marginRight: 10,
     borderRadius: 10,
+    cursor:"pointer"
   },
   categoryImage: {
     height: 80,

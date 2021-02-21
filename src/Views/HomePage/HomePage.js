@@ -15,6 +15,7 @@ const useStyles = makeStyles({
     borderRadius: 1,
     padding: "10px 5px",
     verticalAlign: "middle",
+    cursor:"pointer"
   },
   leftSection: {
     borderRight: "1px solid #757575",
@@ -42,6 +43,10 @@ const useStyles = makeStyles({
     right: 0,
     top: 0,
     bottom: 0,
+  },
+  bottomContainerWeb: {
+    width: "40%",
+    margin:"50px auto"
   },
 });
 export default function HomePage() {
@@ -84,7 +89,7 @@ export default function HomePage() {
             return <AppCard productData={productData} key={`product-data--${index}`} />;
           })}
         </Box>
-        <Box my={2} className={classes.bottomContainer}>
+        <Box my={2} className={`${classes.bottomContainer} ${!isMobileScreen ? classes.bottomContainerWeb : null}`}>
           <Grid container>
             <Grid xs={9}>
               <Box className={classes.leftSection} mr={1}>
