@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     borderRadius: 1,
     padding: "10px 5px",
     verticalAlign: "middle",
-    cursor:"pointer"
+    cursor: "pointer",
   },
   leftSection: {
     borderRight: "1px solid #757575",
@@ -46,7 +46,7 @@ const useStyles = makeStyles({
   },
   bottomContainerWeb: {
     width: "40%",
-    margin:"50px auto"
+    margin: "50px auto",
   },
 });
 export default function HomePage() {
@@ -86,12 +86,12 @@ export default function HomePage() {
         <CategoryBar categoryList={categoryList} onCategoryChange={onCategoryChange} activeCategory={categoryType} />
         <Box display={isMobileScreen ? "inherit" : "flex"} flexWrap="wrap" justifyContent={"space-between"}>
           {productsDataToShow?.map((productData, index) => {
-            return <AppCard productData={productData} key={`product-data--${index}`} />;
+            return <AppCard productData={productData} key={`product-data-${index}`} />;
           })}
         </Box>
         <Box my={2} className={`${classes.bottomContainer} ${!isMobileScreen ? classes.bottomContainerWeb : null}`}>
           <Grid container>
-            <Grid xs={9}>
+            <Grid item xs={9}>
               <Box className={classes.leftSection} mr={1}>
                 <Box className={classes.showingFor}>Showing For</Box>
                 <Select
@@ -101,7 +101,11 @@ export default function HomePage() {
                   inputProps={{ "aria-label": "Without label" }}
                 >
                   {categoryList?.map((category) => {
-                    return <MenuItem value={category}>{category.category_name}</MenuItem>;
+                    return (
+                      <MenuItem value={category} key={category.category_id}>
+                        {category.category_name}
+                      </MenuItem>
+                    );
                   })}
                 </Select>
                 <Box className={classes.essentials}>{categoryType}</Box>
@@ -109,7 +113,7 @@ export default function HomePage() {
                 <Box className={classes.change}>change</Box>
               </Box>
             </Grid>
-            <Grid xs={3}>
+            <Grid item xs={3}>
               <Box onClick={() => setIsAllProducts(!isAllProducts)}>
                 {isAllProducts ? "[-]View Less" : "[+]View More"}
               </Box>

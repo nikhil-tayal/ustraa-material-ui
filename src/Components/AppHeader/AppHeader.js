@@ -150,7 +150,7 @@ export default function PrimarySearchAppBar() {
           ) : null}
           <IconButton aria-label="cart">
             <StyledBadge badgeContent={10}>
-              <ShoppingCartIcon color={"#00cdbe"} />
+              <ShoppingCartIcon  />
             </StyledBadge>
           </IconButton>
           <IconButton aria-label="show 17 new notifications" color="inherit">
