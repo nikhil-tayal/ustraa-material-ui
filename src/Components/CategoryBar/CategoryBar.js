@@ -40,20 +40,17 @@ const useStyles = makeStyles({
     top: "50%",
     left: "50%",
     color: "#fff",
-    fontWeight: 600,
     transform: `translate(-${50}%, -${50}%)`,
     textAlign: "center",
   },
-  activeCategory:{
-    borderBottom:"3px solid #4FCF64",
-  }
+  activeCategory: {
+    borderBottom: "3px solid #4FCF64",
+  },
 });
-export default function CategoryBar({ categoryList, onCategoryChange }) {
-  const [activeCategory, setActiveCategory] = useState(false);
+export default function CategoryBar({ categoryList, onCategoryChange, activeCategory }) {
   const classes = useStyles();
   const onCategoryClick = (category_name, category_id) => {
-    onCategoryChange(category_id);
-    setActiveCategory(category_name);
+    onCategoryChange(category_name, category_id);
   };
   return (
     <React.Fragment>

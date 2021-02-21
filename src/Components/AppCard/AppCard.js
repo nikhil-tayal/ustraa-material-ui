@@ -2,10 +2,12 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Box, Button, useMediaQuery } from "@material-ui/core";
 import StarRate from "@material-ui/icons/StarRate";
+import AppButton from "../AppButton/AppButton";
 const useStyles = makeStyles((theme) => ({
   cardWrapper: {
     padding: "10px",
     marginTop: 10,
+    position: "relative",
   },
   webCard: {
     width: "30%",
@@ -40,11 +42,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "400",
     color: "#bababa",
   },
-  button: {
-    background: "#4FCF64",
-    color: "#fff",
-    marginTop: 10,
-  },
+
 }));
 export default function AppCard({ productData }) {
   const classes = useStyles();
@@ -72,9 +70,9 @@ export default function AppCard({ productData }) {
               ₹ {price}
             </Box>
           </Box>
-          <Button variant="contained" className={classes.button} disabled={!is_in_stock}>
+          <AppButton variant="contained" disabled={!is_in_stock}>
             {is_in_stock ? "Add To Cart" : "Out of Stock"}
-          </Button>
+          </AppButton>
         </Grid>
       </Grid>
     </Box>
